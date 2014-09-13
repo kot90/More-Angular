@@ -10,10 +10,10 @@
 	<nav class="navbar navbar-inverse navbar-fixed-top" id="main-navbar" role="navigation"> 
 		<div class="container"> <!--Container-->
 			<div class="navbar-header">
-				<a href="index.html" class="navbar-brand" style="color:black">Home</a>
-				<a href="index.html" class="navbar-brand" style="color:black">About</a>
-				<a href="index.html" class="navbar-brand" style="color:black">Products</a>
-				<a href="index.html" class="navbar-brand" style="color:black">Contact Us</a>
+				<a href="#index" class="navbar-brand" style="color:black">Home</a>
+				<a href="#about" class="navbar-brand" style="color:black">About</a>
+				<a href="#features" class="navbar-brand" style="color:black">Features</a>
+				<a href="#contactUs" class="navbar-brand" style="color:black">Contact Us</a>
 			</div>
 			<div class="collapse navbar-collapse" id="navbar-collapse">
 				<a href="#" class="btn btn-success navbar-btn navbar-right">Sign In</a>
@@ -28,6 +28,7 @@
 		</div>
 	</div>
 
+	<script type="text/ng-template" id ="index.html">
 	<!--Testimonals-->
 	<div class="container">
 		<section>
@@ -63,12 +64,53 @@
 			</div>
 		</section>
 		<!--End of Testimonals-->
+		</script>
+		<script type="text/ng-template" id="about.html">
+		<!--About Us-->
+			<section>
+				<div class="container">
+					<div class="col-sm-9 col-xs-12 page-section">
+						<h2>About Us</h2>
+						<p>This is where more text will go</p>
+						<h4>Our Mession</h4>
+						<p>Even more text will go here</p>
+					</div>
+				</div>	
+			</section>	
+		<!--End of About Us-->
+		</script>
 
+		<!--Sign Up-->
+		<section>
+			<div class="well">
+				<div class="container text-center">
+					<h3>Sign Up Now</h3>
+					<p>Enter your name and email below</p>
+					<form action="#" class="form-inline" role="form">
+						<div class="form-group">
+							<label for="subscribe-name" class="sr-only">Name</label>
+							<input type="text" class="form-control" id="subscribe-name" placeholder="Name">
+						</div> <!--End of form Group-->
+						<div class="form-group">
+							<label for="subscribe-email" class="sr-only">Email Address</label>
+							<input type="text" class="form-control" id="subscribe-email" placeholder="Email">
+						</div> <!--End of form Group-->
+
+						<button type="submit" class="btn btn-default">Subscribe</button>
+					</form>
+				</div> <!--end of container-->
+			</div> 
+		</section> <!--Sign Up-->
+
+		<div ng-view></div>
+
+		<script type="text/ng-template" id="features.html">
 		<!--Features-->
 		<section>
+		<div class="container">
 			<!--Page Header-->
 			<div class="page-header" id="section-features">
-				<h2>Features. <small>What it's all about</small></h2>
+				<h2>Features. <small>What it''s all about</small></h2>
 				</div>
 			<!--End of page header-->
 
@@ -101,34 +143,16 @@
 					<p>Image will go here later</p>
 				</div>
 			</div> <!--End Row-->
+			</div>
 		</section>
+		</script>
 
-		<!--Well-->
-		<section>
-			<div class="well">
-				<div class="container text-center">
-					<h3>Sign Up Now</h3>
-					<p>Enter your name and email below</p>
-					<form action="#" class="form-inline" role="form">
-						<div class="form-group">
-							<label for="subscribe-name" class="sr-only">Name</label>
-							<input type="text" class="form-control" id="subscribe-name" placeholder="Name">
-						</div> <!--End of form Group-->
-						<div class="form-group">
-							<label for="subscribe-email" class="sr-only">Email Address</label>
-							<input type="text" class="form-control" id="subscribe-email" placeholder="Email">
-						</div> <!--End of form Group-->
-
-						<button type="submit" class="btn btn-default">Subscribe</button>
-					</form>
-				</div> <!--end of container-->
-			</div> <!--End of Well-->
-		</section> 
-
+		<script type="text/ng-template" id="contactUs.html">
 		<!--Section-->
 		<section>
+			<div class="container">
 			<div class="page-header" id="section-contact">
-				<h2>Contact Us. <small>Let's get in touch</small></h2>
+				<h2>Contact Us. <small>Lets get in touch</small></h2>
 			</div>
 			<div class="row">
 				<div class="col-lg-4">
@@ -136,21 +160,43 @@
 						<strong>SL Inc</strong><br>
 						123 E Main St<br>
 						Chicago IL 60647<br>
-						<abbr title="Phone">P:</abbr>(555) 555-5555
+						<abbr title="Phone">P:</abbr>(555) 555-5555<br>
+						info@sl.com
 					</address>
 				</div>
 				<div class="col-lg-8">
 
 				</div>
 			</div>
+			</div>
 		</section>
+		</script>
 	</div>
 	<!--End of Container-->
 
 		<!--Footer-->
 		<div class="footer">
 			<div class="container">
-				<p>&copy; Copyright 2014.</p>
+				<div class="row">
+					<div class="col-lg-12">
+						<div class="col-sm-4">
+							<ul class="list-unstyled">
+							<li>About</li>
+							<li>Contact Us</li>
+							<li>Terms of Service</li>
+							<li>Privacy Policy</li>
+							<p>&copy; Copyright 2014.</p>
+							</ul>
+						</div>
+						<div class="col-sm-4">
+							<ul class="list-unstyled">
+								<li>Support</li>
+								<li>info@sl.com</li>
+								<li>All Rights Reserved</li>
+							</ul>
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
 		<!--End of Footer-->
