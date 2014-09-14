@@ -25,6 +25,14 @@ myApp.config(function($routeProvider){
 	});
 });
 
+myApp.controller('subscribeController', function($scope){
+	//console.log('Hello again!');
+	console.log('first');
+	$scope.test = function(){
+		console.log('hello there');
+	}
+});
+
 myApp.controller('indexController', function($scope){
 	$scope.message = "Home";
 });
@@ -41,4 +49,7 @@ myApp.controller('contactUsController', function($scope){
 	$scope.message = "Contact Us";
 });
 
+function test(){
+	console.log('hello there');
+}
 
